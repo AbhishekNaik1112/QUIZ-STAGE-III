@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import questions from "./qna.json";
 
 const QuizCP = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(1);
 
   const currentQuestion = questions[currentQuestionIndex];
 
@@ -11,7 +13,7 @@ const QuizCP = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
     } else {
-      window.location = "/result?score=" + score;
+      window.location = "/result/" + score;
     }
   };
 
@@ -22,18 +24,23 @@ const QuizCP = () => {
   };
 
   const handleQuitQuiz = () => {
-    if (window.confirm("Are you sure you want to quit?")) {
+    toast.warn("Quitting in 2 seconds");
+    setTimeout(() => {
       window.location = "/";
-    }
+    }, 2000);
   };
+
   const handleFinishQuiz = () => {
-    window.location = "/result?score=" + score;
-   
+    window.location = "/result/" + score;
   };
 
   const handleOptionClick = (selectedOption) => {
     if (selectedOption === currentQuestion.answer) {
       setScore((prevScore) => prevScore + 1);
+      console.log("Correct Answer")
+    }
+    else{
+      console.log("Incorrect Answer")
     }
 
     handleNextQuestion();
@@ -41,6 +48,7 @@ const QuizCP = () => {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white">
+      <ToastContainer />
       <div className="mb-8">
         <div className="text-xl font-bold">
           Question: {currentQuestionIndex + 1} of {questions.length}

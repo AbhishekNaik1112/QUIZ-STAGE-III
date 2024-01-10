@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 const ResultsCP = () => {
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
-  const score = queryParams.get("score");
+  
 
-  useEffect(() => {}, [score]);
+  console.log("kk",useParams())
+
+  const {score} = useParams();
+;
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white">

@@ -39,9 +39,9 @@
       "question": "Who lived at 221B, Baker Street, London?",
       "optionA": "Tony Stark",
       "optionB": "Morgan Freeman",
-      "optionC": "Sherlock Holmes",
+      "optionC": "SherlockHolmes",
       "optionD": "Samuel L. Jackson",
-      "answer": "Sherlock Holmes"
+      "answer": "SherlockHolmes"
   },
 
   {
@@ -102,9 +102,9 @@
       "question": "What’s the capital of Ethiopia?",
       "optionA": "Cape Town",
       "optionB": "San Francisco",
-      "optionC": "Abuja",
+      "optionC": "AddisAbaba",
       "optionD": "Syndey",
-      "answer": "Addis Ababa"
+      "answer": "AddisAbaba"
   },
 
   {
