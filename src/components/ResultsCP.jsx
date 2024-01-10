@@ -1,14 +1,10 @@
 import React, { useEffect } from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const ResultsCP = () => {
-  
-
   console.log("kk",useParams())
 
-  const {score} = useParams();
-;
-
+  const { score } = useParams();
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white">
       <div className="text-3xl font-bold mb-8">
