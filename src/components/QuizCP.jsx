@@ -69,7 +69,7 @@ const QuizCP = () => {
         </button>
         <button
           onClick={handleNextQuestion}
-          className="bg-white hover:bg-gray-300 text-black font-bold py-2 px-4 rounded"
+          className="bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded"
         >
           Next
         </button>
