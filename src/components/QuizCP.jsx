@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const QuizCP = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(1);
   const navigate = useNavigate();
 
   const currentQuestion = questions[currentQuestionIndex];
