@@ -15,7 +15,7 @@ const QuizCP = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
     } else {
-      navigate("/result/");
+      navigate("/result/" + score);
     }
   };
 
