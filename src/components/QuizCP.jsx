@@ -39,8 +39,10 @@ const QuizCP = () => {
   const handleOptionClick = (selectedOption) => {
     if (selectedOption === currentQuestion.answer) {
       setScore((prevScore) => prevScore + 1);
+      toast.success("Correct Answer", { autoClose: 1000 });
       console.log("Correct Answer");
     } else {
+      toast.error("Incorrect Answer", { autoClose: 1000 });
       console.log("Incorrect Answer");
     }
 
